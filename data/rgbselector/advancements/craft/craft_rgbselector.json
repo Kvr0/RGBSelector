@@ -1,0 +1,15 @@
+{
+    "parent": "rgbselector:craft/root",
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:recipe_unlocked",
+        "conditions": {
+          "recipe": "rgbselector:rgb_selector"
+        }
+      }
+    },
+    "rewards": {
+      "function": "rgbselector:general/craft/rgb_selector"
+    }
+  }
+  
