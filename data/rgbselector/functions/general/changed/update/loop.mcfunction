@@ -50,7 +50,7 @@
     scoreboard players operation $RGBSelector.Color Temporary += $RGBSelector.Value.Blue Temporary
 
 ## Output
-    execute if data storage customguicore: {Temp:{RGBSelector:{ChangedItem:{Slot:8b}}}} run function rgbselector:general/changed/update/check_output
+    execute if data storage customguicore: {Temp:{RGBSelector:{ChangedItem:{Slot:8b}}}} run function #rgbselector:output
 
 ## Restore
 ### Dye
