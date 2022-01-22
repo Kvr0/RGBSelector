@@ -41,7 +41,7 @@
     execute if score $RGBSelector.Value.Blue Temporary matches ..-1 run scoreboard players set $RGBSelector.Value.Blue Temporary 0
     execute if score $RGBSelector.Value.Blue Temporary matches 256.. run scoreboard players set $RGBSelector.Value.Blue Temporary 255
 
-## Clac Color
+## Calc Color
     scoreboard players set $RGBSelector.Color Temporary 0
     scoreboard players operation $RGBSelector.Color Temporary += $RGBSelector.Value.Red Temporary
     scoreboard players operation $RGBSelector.Color Temporary *= $256 Const
@@ -66,18 +66,32 @@
 ### Items
 ### Value
     data modify block -30000000 2 43885 Text1 set value '[{"text":"","italic":false},{"score":{"name": "$RGBSelector.Value.Red","objective": "Temporary"}}]'
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].BlockGUI.Parts[4].tag.display.Name set from block -30000000 2 43885 Text1
+    data modify storage customguicore: Input.SetItem set value {Slot:4b}
+    data modify storage customguicore: Input.SetItem.tag.display.Name set from block -30000000 2 43885 Text1
+    function customguicore:blockgui/api/set_item/_
+
     data modify block -30000000 2 43885 Text1 set value '[{"text":"","italic":false},{"score":{"name":"$RGBSelector.Value.Green","objective":"Temporary"}}]'
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].BlockGUI.Parts[13].tag.display.Name set from block -30000000 2 43885 Text1
+    data modify storage customguicore: Input.SetItem set value {Slot:13b}
+    data modify storage customguicore: Input.SetItem.tag.display.Name set from block -30000000 2 43885 Text1
+    function customguicore:blockgui/api/set_item/_
+
     data modify block -30000000 2 43885 Text1 set value '[{"text":"","italic":false},{"score":{"name":"$RGBSelector.Value.Blue","objective":"Temporary"}}]'
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].BlockGUI.Parts[22].tag.display.Name set from block -30000000 2 43885 Text1
+    data modify storage customguicore: Input.SetItem set value {Slot:22b}
+    data modify storage customguicore: Input.SetItem.tag.display.Name set from block -30000000 2 43885 Text1
+    function customguicore:blockgui/api/set_item/_
+
 ### Color
     data modify block -30000000 2 43885 Text1 set value '[{"text":"","italic":false,"color":"white"},{"score":{"name": "$RGBSelector.Value.Red","objective": "Temporary"},"color":"#ff0000"},{"text":" "},{"score":{"name": "$RGBSelector.Value.Green","objective": "Temporary"},"color":"#00ff00"},{"text":" "},{"score":{"name": "$RGBSelector.Value.Blue","objective": "Temporary"},"color":"#0000ff"}]'
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].BlockGUI.Parts[17].tag.display.Name set from block -30000000 2 43885 Text1
-    execute store result storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].BlockGUI.Parts[17].tag.CustomPotionColor int 1 run scoreboard players get $RGBSelector.Color Temporary
+    data modify storage customguicore: Input.SetItem set value {Slot:17b}
+    data modify storage customguicore: Input.SetItem.tag.display.Name set from block -30000000 2 43885 Text1
+    execute store result storage customguicore: Input.SetItem.tag.CustomPotionColor int 1 run scoreboard players get $RGBSelector.Color Temporary
+    function customguicore:blockgui/api/set_item/_
+
 ### Indicator
     data modify block -30000000 2 43885 Text1 set value '[{"text":"","italic":false,"color":"white"},{"score":{"name": "$RGBSelector.Dye.Red","objective": "Temporary"},"color":"#ff0000"},{"text":" "},{"score":{"name": "$RGBSelector.Dye.Green","objective": "Temporary"},"color":"#00ff00"},{"text":" "},{"score":{"name": "$RGBSelector.Dye.Blue","objective": "Temporary"},"color":"#0000ff"}]'
-    data modify storage oh_my_dat: _[-4][-4][-4][-4][-4][-4][-4][-4].BlockGUI.Parts[18].tag.display.Name set from block -30000000 2 43885 Text1
+    data modify storage customguicore: Input.SetItem set value {Slot:18b}
+    data modify storage customguicore: Input.SetItem.tag.display.Name set from block -30000000 2 43885 Text1
+    function customguicore:blockgui/api/set_item/_
 
 
 data remove storage customguicore: Temp.RGBSelector.ChangedItems[0]
