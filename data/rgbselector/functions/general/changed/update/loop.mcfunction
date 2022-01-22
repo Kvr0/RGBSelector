@@ -40,6 +40,19 @@
     execute if data storage customguicore: {Temp:{RGBSelector:{ChangedItem:{Slot:24b}}}} run scoreboard players add $RGBSelector.Value.Blue Temporary 16
     execute if score $RGBSelector.Value.Blue Temporary matches ..-1 run scoreboard players set $RGBSelector.Value.Blue Temporary 0
     execute if score $RGBSelector.Value.Blue Temporary matches 256.. run scoreboard players set $RGBSelector.Value.Blue Temporary 255
+### Sound Effect
+    execute if data storage customguicore: {Temp:{RGBSelector:{ChangedItem:{Slot:2b}}}} run playsound ui.button.click master @a ~ ~ ~ 1 1
+    execute if data storage customguicore: {Temp:{RGBSelector:{ChangedItem:{Slot:3b}}}} run playsound ui.button.click master @a ~ ~ ~ 1 1
+    execute if data storage customguicore: {Temp:{RGBSelector:{ChangedItem:{Slot:5b}}}} run playsound ui.button.click master @a ~ ~ ~ 1 1
+    execute if data storage customguicore: {Temp:{RGBSelector:{ChangedItem:{Slot:6b}}}} run playsound ui.button.click master @a ~ ~ ~ 1 1
+    execute if data storage customguicore: {Temp:{RGBSelector:{ChangedItem:{Slot:11b}}}} run playsound ui.button.click master @a ~ ~ ~ 1 1
+    execute if data storage customguicore: {Temp:{RGBSelector:{ChangedItem:{Slot:12b}}}} run playsound ui.button.click master @a ~ ~ ~ 1 1
+    execute if data storage customguicore: {Temp:{RGBSelector:{ChangedItem:{Slot:14b}}}} run playsound ui.button.click master @a ~ ~ ~ 1 1
+    execute if data storage customguicore: {Temp:{RGBSelector:{ChangedItem:{Slot:15b}}}} run playsound ui.button.click master @a ~ ~ ~ 1 1
+    execute if data storage customguicore: {Temp:{RGBSelector:{ChangedItem:{Slot:20b}}}} run playsound ui.button.click master @a ~ ~ ~ 1 1
+    execute if data storage customguicore: {Temp:{RGBSelector:{ChangedItem:{Slot:21b}}}} run playsound ui.button.click master @a ~ ~ ~ 1 1
+    execute if data storage customguicore: {Temp:{RGBSelector:{ChangedItem:{Slot:23b}}}} run playsound ui.button.click master @a ~ ~ ~ 1 1
+    execute if data storage customguicore: {Temp:{RGBSelector:{ChangedItem:{Slot:24b}}}} run playsound ui.button.click master @a ~ ~ ~ 1 1
 
 ## Calc Color
     scoreboard players set $RGBSelector.Color Temporary 0
